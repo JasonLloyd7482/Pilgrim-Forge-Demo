@@ -1,0 +1,85 @@
+:root {
+  --navy: #0a1428;
+  --gold: #f3ddb0;
+  --gold-dim: #a78446;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: var(--navy);
+  color: var(--gold);
+  font-family: "Cinzel", Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+}
+
+#stage {
+  position: fixed;
+  inset: 0;
+}
+
+#stage canvas {
+  display: block;
+}
+
+.vignette {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 50% 40%, transparent 42%, rgba(3, 6, 14, 0.55) 100%);
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: max(1.15rem, 4.5vh);
+  z-index: 1;
+  text-align: center;
+  pointer-events: none;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 500;
+  font-size: clamp(1.15rem, min(4.2vw, 7.2vh), 2.75rem);
+  letter-spacing: 0.38em;
+  text-indent: 0.38em;
+  line-height: 1.15;
+  color: var(--gold);
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55);
+}
+
+.rule {
+  width: min(14rem, 42vw);
+  height: 1px;
+  margin: 0.75rem auto 0.65rem;
+  border: 0;
+  background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+}
+
+@media (max-height: 560px) {
+  h1 {
+    font-size: clamp(1rem, 5.4vh, 1.55rem);
+  }
+
+  .rule {
+    margin: 0.4rem auto 0.35rem;
+  }
+
+  .overlay {
+    bottom: 0.7rem;
+  }
+}
+
+.version {
+  margin: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.32em;
+  text-indent: 0.32em;
+  color: #c6a56a;
+}
