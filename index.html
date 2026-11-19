@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pilgrim Forge</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23e7c78a' d='M16 2 19 13 30 16 19 19 16 30 13 19 2 16 13 13Z'/%3E%3C/svg%3E" />
+  <meta name="description" content="Pilgrim Forge — a spinning brass astrolabe over a forge glow." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!--
+    Import map: when the script says `import ... from 'three'`, the browser
+    downloads Three.js from the CDN below. No npm install and no build step.
+  -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.187.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.187.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="stage"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <header class="overlay">
+    <h1>PILGRIM FORGE</h1>
+    <hr class="rule" />
+    <p class="version">Demo v0.1</p>
+  </header>
+  <script type="module" src="js/astrolabe.js"></script>
+</body>
+</html>
